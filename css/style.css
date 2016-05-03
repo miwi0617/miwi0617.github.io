@@ -4,8 +4,6 @@ body {
   margin: 0;
   font-size: 14px;
   font-family: "Helvetica Neue", Helvetica;
-  padding-top: 60px;
-  padding-bottom: 40px;
 }
 
 #chart, #header, #footer {
@@ -74,7 +72,7 @@ line {
 }
 
 a:link, a:visited {
-  color: #000;
+  color: #666;
   text-decoration: none;
 }
 
@@ -88,4 +86,98 @@ a:hover {
   width: 1280px;
   font-size: 12px;
   color: #999;
+}
+
+#home {
+  background: url(../home.jpg) no-repeat center center fixed; 
+  display: table;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* Single-direction drop shadow */
+
+hr.style {
+    height: 12px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* Service icon animation */
+.service {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border: 1px solid #ddd;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.service .icon-holder {
+  position: relative;
+  top: 100px;
+  display: inline-block;
+  margin-bottom: 40px;
+  padding: 10px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.service .heading {
+  position: relative;
+  top: 30px;
+  -webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.service .icon-holder > img.icon {
+  width: 40px;
+}
+
+.service:hover {
+  border-color: #ddd;
+  background-image: url(../red_sky_flatirons_boulder.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.service:hover .icon-holder {
+  top: -30px;
+}
+
+.service:hover .heading {
+  top: 0px;
+}
+
+.service .description {
+  width: 80%;
+  margin: 0 auto;
+  opacity: 0;
+  -webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.service:hover .description {
+  color: white;
+  text-shadow:
+  -1px -1px 0 #000,  
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
 }

@@ -4,24 +4,15 @@
     <meta charset="utf-8">
     <title>Michael D. Williams GitHub</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="Michael D. William's GitHub">
-    <!-- D3 Script -->
+    <meta content="" name="Michael D. William's GitHub"><!-- D3 Script -->
+
     <script src="d3/d3.js" type="text/javascript">
     </script>
     <script src="d3/d3.layout.js" type="text/javascript">
-    </script>
-    <!-- D3 Node Style -->
+    </script><!-- D3 Node Style -->
     <link href="css/treeLayoutNode.css" rel="stylesheet" type="text/css">
-    <!-- Bootstrap Script -->
-    <script src="bootstrap/js/bootstrap.min.js">
-    </script>
-    <!-- Bootstrap Style -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type=
-    "text/css">
-    <!-- Optional theme -->
-    <!-- <link href="Bootstrap/CSS/bootstrap-theme.min.css" rel="stylesheet" type="text/css"> -->
-
     <!-- Table -->
+
     <style type="text/css">
       table#t01 {
         width: 100%;
@@ -47,7 +38,7 @@
     </style>
     <style>
       .jumbotron {
-        background-color: #fff !important;
+        background: rgba(255, 255, 255, .75) !important;
         border-style: solid;
         border-width: 1px;
         padding-top: 10px !important;
@@ -55,26 +46,18 @@
       }
     </style>
     <link href="css/style.css" rel="stylesheet" type="text/css">
-
     <!-- Sidebar Style -->
     <link href="css/sidebar.css" rel="stylesheet" type="text/css">
-
     <!--Bootstrap CSS -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type=
+    "text/css">
+    <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" type=
+    "text/css"><!-- jQuery Script -->
 
-    <!-- Bootstrap JS -->
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="jQuery/jquery-2.1.1.min.js"></script>
 
-    <script src="js/processing.js" type="text/javascript">
-    </script>
-
-    <!-- jQuery Script -->
-    <script src="jQuery/jquery-2.1.1.min.js">
-    </script>
-
+    <script src='js/jquery.scrollto.js'></script>
     <!-- Content Delivery Networks, not used in case they ever go down. -->
-
     <!-- Bootstrap Style CDN 3.3.6 -->
     <!-- <link crossorigin="anonymous" href=
     "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
@@ -87,26 +70,24 @@
     integrity=
     "sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r"
     rel="stylesheet"> -->
-
     <!-- Bootstrap Script CDN 3.3.6 -->
     <!-- <script src=
     "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
     </script> -->
-
     <!-- jQuery CDN -->
     <!-- <script src="https://code.jquery.com/jquery-2.1.1.min.js">
     </script> -->
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+<!--     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="navbar-header">
             <a class="navbar-brand" href="#">Michael D. Williams</a>
         </div>
-    </div>
-    <div class="container">
+    </div> -->
+    <div class="container" id="home">
         <div class="row profile">
             <div class="col-md-3">
-                <div class="sidebar">
+                <div class="sidebar-fixed sidebar">
                     <!-- SIDEBAR USERPIC -->
                     <div class="userpic"><img alt="" class="img-responsive"
                     src="MichaelWilliams.jpg"></div>
@@ -128,7 +109,25 @@
                         "button">LinkedIn</button>
                     </div><!-- END SIDEBAR BUTTONS -->
                     <!-- SIDEBAR MENU -->
-                    <div class="menu">
+                    <div class="sidebar">
+                    <div id="nav-anchor"></div>
+                    <nav>
+                        <ul class="nav">
+                            <li>
+                                <a href="#pageTop">Home</a>
+                            </li>
+                            <li>
+                                <a href="#aboutMe">About Me</a>
+                            </li>
+                            <li>
+                                <a href="#workExp">Work Experience</a>
+                            </li>
+                            <li>
+                                <a href="#techSkills">Technical Skills</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    </div><!-- <div class="menu">
                         <ul class="nav">
                             <li class="active">
                                 <a href="#"><i class=
@@ -147,114 +146,304 @@
                                 "glyphicon glyphicon-flag"></i> Contact</a>
                             </li>
                         </ul>
-                    </div><!-- END MENU -->
+                    </div> --><!-- END MENU -->
                 </div>
             </div>
             <div class="col-md-9">
-                <div class="content">
-                    <!--  <div class="container"> -->
-                    <!-- Main hero unit for a primary marketing message or call to action -->
-                    <!-- <div class="col-md-9"> -->
-                    <div class="jumbotron" id="about">
-                        <h1>Hello,</h1>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <span>Sed ut perspiciatis unde omnis iste natus
-                                error sit voluptatem accusantium doloremque
-                                laudantium, totam rem aperiam, eaque ipsa quae
-                                ab illo inventore veritatis et quasi architecto
-                                beatae vitae dicta sunt explicabo. Nemo enim
-                                ipsam voluptatem.<br>
-                                <br></span>
-                            </div>
-                            <div class="col-md-6">
-                                <span>Sed ut perspiciatis unde omnis iste natus
-                                error sit voluptatem accusantium doloremque
-                                laudantium, totam rem aperiam, eaque ipsa quae
-                                ab illo inventore veritatis et quasi architecto
-                                beatae vitae dicta sunt explicabo. Nemo enim
-                                ipsam voluptatem.<br>
-                                <br></span>
-                            </div>
+                <div class="content" id="hello">
+                    <div class="tab-content">
+                    <section id="pageTop">
+                    <h1>Hello,</h1>
+                    <div class="row">
+                        <div class="col-md-6">
+                        <p>This is my Github page. It was created to give a quick, simple overview on my experience working as a developer.</p>
+                        <p>Enjoy.</p>
                         </div>
-                        <div class="block-content">
-                            <div class="info">
-                                <!--Row-->
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <table id="t01">
-                                            <tr>
-                                                <th><b>Name</b></th>
-                                                <td>Michael Williams</td>
-                                            </tr>
-                                            <tr>
-                                                <th><b>Email</b></th>
-                                                <td>Mike2457@gmail.com</td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <table id="t01">
-                                            <tr>
-                                                <th><b>Current Job</b></th>
-                                                <td>Leeds School of
-                                                Business,<br>
-                                                Webmaster</td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                </div><!--End row-->
-                            </div>
-                        </div><!--End block content-->
                     </div>
-                    <div id="resume">
-                    <h1>Resume</h1> </div>
-                    <hr>
-                        <h2>Technical Skills</h2>
-                    <h3>Programming</h3>
-                    <!-- <input id="show_button" type="button"
-                    value="Show"> -->
-                    <div style=
-                    "border-style: solid; padding: 15px; text-align: center;">
-                        <input class="btn btn-default" id="show_button" value=
-                        "Show All" style="color: transparent;text-shadow: 0 0 0 black;"> <button class="btn btn-primary" onclick=
-                        "showC()">Show C / C++ / C#</button> <button class=
-                        "btn btn-info" onclick="showJava()">Show Java</button>
-                        <button class="btn btn-warning" onclick=
-                        "showWeb()">Show Web</button> <button class=
-                        "btn btn-success" onclick="showPython()">Show
-                        Python</button> <button class="btn btn-danger" onclick=
-                        "showRuby()">Show Ruby</button>
-                        <div id="displayNodeTree"></div>
-                    <div align="right">Made using <a href="http://getbootstrap.com/">Bootstrap</a>, <a href="https://d3js.org/">D3</a>, and <a href="https://jquery.com/">jQuery</a>.<br>
-                    See code here: <a href="https://github.com/miwi0617/d3NodeTree">https://github.com/miwi0617/d3NodeTree</a></div>
+                        </div></section>
+                        <section id="aboutMe">
+                        <hr class="style">
+                        <h2>About Me</h2>
+                        <div class="row services">
+                    <div class="col-md-4">
+                        <div class="service">
+                            <h4 class="heading">My name is</h4>
+                            <p class="description">Michael Williams and I am currently living in beautiful Boulder, Colorado.</p>
+                        </div>
                     </div>
-                    <h3>Examples</h3>
-                    <h4>Made with Processing, imported to HTML through Processing.js</h4>
-                    <p>Mouse over rainbow gradient
-                    <canvas data-processing-sources="t/gradient.pde" id="t"></canvas></p>
+                    <div class="col-md-4">
+                        <div class="service">
+<!--                             <div class="icon-holder">
+                                <img src="" alt="" class="icon">
+                            </div> -->
+                            <h4 class="heading">I graduated from</h4>
+                            <p class="description">the University of Colorado, Boulder, with a B.S. in Computer Science in 2015.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service">
+                            <h4 class="heading">I am a</h4>
+                            <p class="description">Front and Back End Web Developer with five years of experience.</p>
+                        </div>
+                    </div>
                 </div>
+                        </section>
+                                                <section id="workExp">
+                                                <hr class="style">
+                            <h2>Work Experience</h2>
+    <div class="well">
+    <div class="row">
+    <div class="col-md-4">
+        <ul class="nav nav-pills">
+            <li class="active">
+                <a data-toggle="pill" href="#leeds"><b>Leeds School of Business</b><br />Webmaster<br />September 2015 - Present</a>
+            </li>
+            <li>
+                <a data-toggle="pill" href="#cires"><b>CIRES</b><br />Webmaster/IT Assistant<br />
+                September 2015 - July 2015</a>
+            </li>
+            <li>
+                <a data-toggle="pill" href="#dragon"><b>Dragon Dev.</b><br />Junior Application Developer<br />July 2013 - July 2014</a>
+            </li>
+            <li>
+                <a data-toggle="pill" href="#ncwit"><b>NCWIT</b><br />Web/Student Assistant<br />November 2011 - May 2014</a>
+            </li>
+        </ul>
+        </div>
+        <div class="col-md-8">
+        <div class="tab-content">
+            <div class="tab-pane fade in active" id="leeds">
+                <ul>
+                    <li>
+                        <p>Maintain the overall health and usability of the
+                        site by processing and tracking on-going requests for
+                        content updates and development of new micro-sites.</p>
+                    </li>
+                    <li>
+                        <p>Led effort to improve applicant communication
+                        through creating and distributing email campaigns using
+                        Survey Monkey, Constant Contact, and mail merge in
+                        Microsoft Word which has led to a three times higher
+                        email-open rate and a record high number of
+                        applications.</p>
+                    </li>
+                    <li>
+                        <p>Also create online forms using the CMS that provide
+                        user-related data to the Leeds School of Business
+                        stakeholders which has helped improve the sites SEO
+                        practices and ultimately helped bring up the school’s
+                        U.S. News & World Report rank.</p>
+                    </li>
+                </ul>
+                                    <div class="col-md-6 col-md-offset-6">
+                        <a class="btn btn-primary btn-lg btn-block active" href="http://www.colorado.edu/business/" role="button">Leeds Website  <span class="glyphicon glyphicon-share-alt"></span></a>
+                    </div>
+            </div>
+            <div class="tab-pane fade" id="cires">
+                <ul>
+                    <li>
+                        <p>Developed then executed strategy to update entire
+                        website from individually created HTML files to
+                        Concrete5, a content management system, which improved
+                        site security and reduced resources needed to maintain
+                        site by over 50%.</p>
+                    </li>
+                    <li>
+                        <p>Compiled and debugged new API’s and the
+                        functionality of web-based scripting languages such as
+                        JavaScript and Python in Concrete5 to ensure all
+                        webpages were unified and working. Modified a Google
+                        Chrome plug-in to analyze all links in the transition
+                        of site management systems to run nightly and report
+                        errors which could be quickly and efficiently be
+                        fixed.</p>
+                    </li>
+                    <li>
+                        <p>Responsible for providing on-site technical support
+                        related to all computer systems, hardware, and software
+                        by helping to manage the ticketing system for all
+                        requests. Executed in a manner that led to 100%
+                        customer satisfaction rating.</p>
+                    </li>
+                </ul>
+                                    <div class="col-md-6 col-md-offset-6">
+                        <a class="btn btn-primary btn-lg btn-block active"
+                        href="http://cires.colorado.edu/" role="button">CIRES Website  <span class="glyphicon glyphicon-share-alt"></span></a>
+                    </div>
+            </div>
+            <div class="tab-pane fade" id="dragon">
+                <ul>
+                    <li>
+                        <p>Worked in a small team to tailor applications to
+                        meet the needs of various clients in database and
+                        website development.</p>
+                    </li>
+                    <li>
+                        <p>Using Microsoft Visual Web Developer and SQL Server
+                        Management Studio executed development of multiple
+                        applications across their full life cycle (from
+                        designing the wire frame thru planning and development
+                        to implementation) using an agile-based, scrum
+                        framework.</p>
+                    </li>
+                </ul>
+                                    <div class="col-md-6 col-md-offset-6">
+                        <a class="btn btn-primary btn-lg btn-block active"
+                        href="http://dragondev.com/" role="button">Dragon Dev Website  <span class="glyphicon glyphicon-share-alt"></span></a>
+                    </div>
+            </div>
+            <div class="tab-pane fade" id="ncwit">
+                <ul>
+                    <li>
+                        <p>Helped manage online contact and resource database
+                        while prioritizing multiple projects and scholarship
+                        campaigns put on to encourage more women to enter STEM
+                        fields.</p>
+                    </li>
+                    <li>
+                        <p>Extracted summary information from large volume of
+                        applications and partially automated updating of
+                        scholarship websites using extracted information.</p>
+                    </li>
+                </ul>
+                                    <div class="col-md-6 col-md-offset-6">
+                        <a class="btn btn-primary btn-lg btn-block active"
+                        href="https://www.ncwit.org/" role="button">NCWIT Website  <span class="glyphicon glyphicon-share-alt"></span></a>
+                    </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                        </div></section>
+                        <section id="techSkills">
+                        <hr class="style">
+    <h2>Technical Skills</h2>
+    <form>
+        <input class="btn btn-default" type="button" id="show_button" style=
+        "color: transparent;text-shadow: 0 0 0 black;" value="Show All">
+        <input class="btn btn-primary" type="button" value="Show C / C++ / C#" onclick="showC()">
+        <input class="btn btn-info" type="button" value="Show Java" onclick="showJava()">
+        <input class="btn btn-warning" type="button" value="Show Web" onclick="showWeb()">
+        <input class="btn btn-success" type="button" value="Show Python" onclick="showPython()">
+        <input class="btn btn-danger" type="button" value="Show Ruby" onclick="showRuby()">
+    </form>
+    <div id="displayNodeTree"></div>
+        <div align="right">
+        Made using <a href="http://getbootstrap.com/">Bootstrap</a>, <a href=
+        "https://d3js.org/">D3</a>, and <a href=
+        "https://jquery.com/">jQuery</a>.<br>
+        See code here: <a href=
+        "https://github.com/miwi0617/d3NodeTree">https://github.com/miwi0617/d3NodeTree</a>
+    </div>
+                        </div>
+                    </div>
+                </div>
+                            <div>
+            <p class="text-right">Copyright &copy; Michael Williams <script type="text/javascript">document.write((new Date()).getFullYear());</script></p>
+          </div>
             </div>
         </div>
-        </div>
-
+    </div>
+    </section>
+        <!-- <h3>Examples</h3>
+                    <h4>Made with Processing, imported to HTML through Processing.js</h4>
+                    <p>Mouse over rainbow gradient
+                    <canvas data-processing-sources="t/gradient.pde" id="t"></canvas></p> -->
     <!-- Optimize the page loading time by placing javaScript functions at the bottom of the body tag. JavaScript libraries are loaded in the head tag. -->
-
     <!-- Menu Active Item Script -->
-    <script>
+    <!--     <script>
     $(function() {
     $(".nav li").on("click", function() {
       $(".nav li").removeClass("active");
       $(this).addClass("active");
     });
     });
+    </script> -->
+    <!-- Toggle Show All/Root Button -->
+    <script src="js/toggleButton.js" type="text/javascript">
+    </script> <!-- Node Tree -->
+     
+    <script src="js/nodeTree.js" type="text/javascript">
+    </script> <!-- Bootstrap JS -->
+     
+    <script src="bootstrap/js/bootstrap.min.js">
+    </script> 
+    <script src="js/processing.js" type="text/javascript">
     </script>
 
-    <!-- Toggle Show All/Root Button -->
-    <script src="js/toggleButton.js" type="text/javascript"></script>
+<script>
+    
 
-    <!-- Node Tree -->
-    <script src="js/nodeTree.js" type="text/javascript">
-    </script> 
+        
+    $(document).ready(function(){
+        
+        /** 
+         * This part does the "fixed navigation after scroll" functionality
+         * We use the jQuery function scroll() to recalculate our variables as the 
+         * page is scrolled/
+         */
+        $(window).scroll(function(){
+            var window_top = $(window).scrollTop() + 12; // the "12" should equal the margin-top value for nav.stick
+            var div_top = $('#nav-anchor').offset().top;
+                if (window_top > div_top) {
+                    $('nav').addClass('stick');
+                } else {
+                    $('nav').removeClass('stick');
+                }
+        });
+        
+        
+        /**
+         * This part causes smooth scrolling using scrollto.js
+         * We target all a tags inside the nav, and apply the scrollto.js to it.
+         */
+        $("nav a").click(function(evn){
+            evn.preventDefault();
+            $('html,body').scrollTo(this.hash, this.hash); 
+        });
+        
+        
+        
+        /**
+         * This part handles the highlighting functionality.
+         * We use the scroll functionality again, some array creation and 
+         * manipulation, class adding and class removing, and conditional testing
+         */
+        var aChildren = $("nav li").children(); // find the a children of the list items
+        var aArray = []; // create the empty aArray
+        for (var i=0; i < aChildren.length; i++) {    
+            var aChild = aChildren[i];
+            var ahref = $(aChild).attr('href');
+            aArray.push(ahref);
+        } // this for loop fills the aArray with attribute href values
+        
+        $(window).scroll(function(){
+            var windowPos = $(window).scrollTop(); // get the offset of the window from the top of page
+            var windowHeight = $(window).height(); // get the height of the window
+            var docHeight = $(document).height();
+            
+            for (var i=0; i < aArray.length; i++) {
+                var theID = aArray[i];
+                var divPos = $(theID).offset().top; // get the offset of the div from the top of page
+                var divHeight = $(theID).height(); // get the height of the div in question
+                if (windowPos >= divPos && windowPos < (divPos + divHeight)) {
+                    $("a[href='" + theID + "']").addClass("nav-active");
+                } else {
+                    $("a[href='" + theID + "']").removeClass("nav-active");
+                }
+            }
+            
+            if(windowPos + windowHeight == docHeight) {
+                if (!$("nav li:last-child a").hasClass("nav-active")) {
+                    var navActiveCurrent = $(".nav-active").attr("href");
+                    $("a[href='" + navActiveCurrent + "']").removeClass("nav-active");
+                    $("nav li:last-child a").addClass("nav-active");
+                }
+            }
+        });
+    });
+
+</script>
+
 </body>
 </html>
