@@ -143,9 +143,23 @@ hr.style {
   width: 40px;
 }
 
-.service:hover {
+.serviceA:hover {
   border-color: #ddd;
   background-image: url(../red_sky_flatirons_boulder.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.serviceB:hover {
+  border-color: #ddd;
+  background-image: url(../buff_1.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.serviceC:hover {
+  border-color: #ddd;
+  background-image: url(../webDev.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
@@ -180,4 +194,67 @@ hr.style {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
+}
+
+@media screen and (max-width: 399px) {
+.nodeTreeBox {
+  width: 300px !important;
+  overflow: scroll !important;
+  height: 475px;
+}
+}
+
+@media screen and (min-width: 400px) {
+.nodeTreeBox {
+  width: 350px !important;
+  overflow: scroll !important;
+  height: 475px;
+}
+}
+
+@media screen and (min-width: 500px) {
+.nodeTreeBox {
+  width: 450px !important;
+  overflow: scroll !important;
+  height: 475px;
+}
+}
+
+@media screen and (min-width: 600px) {
+.nodeTreeBox {
+  width: 550px !important;
+  overflow: scroll !important;
+  height: 475px;
+}
+}
+
+@media screen and (min-width: 700px) {
+.nodeTreeBox {
+  width: 650px !important;
+  overflow: scroll !important;
+  height: 475px;
+}
+}
+
+@media screen and (min-width: 800px) {
+.nodeTreeBox {
+  width: 750px !important;
+  overflow: scroll !important;
+  height: 475px;
+}
+}
+
+@media screen and (min-width: 1099px) {
+.nodeTreeBox {
+  width: 850px !important;
+  overflow: scroll !important;
+  height: 475px;
+}
+}
+
+@media screen and (min-width: 1100px) {
+.nodeTreeBox {
+  width: 100% !important;
+  height: 475px;
+}
 }

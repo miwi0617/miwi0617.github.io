@@ -7,8 +7,8 @@ var tree = d3.layout.tree().size([h, w]);
 var diagonal = d3.svg.diagonal().projection(function(d) {
     return [d.y, d.x];
 });
-var vis = d3.select("#displayNodeTree").append("svg:svg").attr("width", w + m[1] + m[3]).attr(
-    "height", h + m[0] + m[2]).append("svg:g").attr("transform",
+var vis = d3.select("#displayNodeTree").append("svg:svg").attr("width", "650px").attr(
+    "height", "100%").append("svg:g").attr("transform",
     "translate(" + m[3] + "," + m[0] + ")");
 d3.json("json/programmingLanguages.json", function(json) {
     root = json;
