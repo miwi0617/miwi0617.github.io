@@ -1,3 +1,5 @@
+//Show All/Show Root Toggle Button
+
 $(document).on('click', '#show_button', function() {
     var $this = $(this);
     $this.prop('id', 'hide_button');
