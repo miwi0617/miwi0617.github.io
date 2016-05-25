@@ -131,7 +131,7 @@ hr.style {
 
 .service .icon-holder {
   position: relative;
-  top: 100px;
+  /*top: 100px;*/
   display: inline-block;
   margin-bottom: 40px;
   padding: 10px;
@@ -141,7 +141,7 @@ hr.style {
 
 .service .heading {
   position: relative;
-  top: 30px;
+  /*top: 30px;*/
   -webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
   transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
@@ -150,32 +150,32 @@ hr.style {
   width: 40px;
 }
 
-.serviceA:hover {
+.serviceA {
   border-color: #ddd;
   background-image: url(../images/red_sky_flatirons_boulder.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 
-.serviceB:hover {
+.serviceB {
   border-color: #ddd;
   background-image: url(../images/buff_1.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 
-.serviceC:hover {
+.serviceC {
   border-color: #ddd;
   background-image: url(../images/webDev.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
-
-.service:hover .icon-holder {
+/*hover*/
+.service .icon-holder {
   top: -30px;
 }
-
-.service:hover .heading {
+/*hover*/
+.service .heading {
   top: 0px;
 }
 
@@ -189,8 +189,8 @@ hr.style {
   -ms-transform: scale(0);
   transform: scale(0);
 }
-
-.service:hover .description {
+/*hover*/
+.service .description {
   color: white;
   text-shadow:
   -1px -1px 0 #000,  
